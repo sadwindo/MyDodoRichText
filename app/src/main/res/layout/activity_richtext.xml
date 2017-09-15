@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<include-->
+    <!--android:id="@+id/title"-->
+    <!--layout="@layout/simple_title_bar" />-->
+
+
+    <LinearLayout
+        android:id="@+id/ll_tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/action_bold"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:contentDescription="@null"
+                android:onClick="setBold"
+                android:scaleType="center"
+                android:src="@mipmap/icon_rich_bold" />
+
+            <ImageButton
+                android:id="@+id/action_italic"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:contentDescription="@null"
+                android:onClick="setUnderline"
+                android:scaleType="center"
+                android:src="@mipmap/icon_rich_underline" />
+
+            <ImageButton
+                android:id="@+id/action_size"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:contentDescription="@null"
+                android:onClick="setFontSize"
+                android:scaleType="center"
+                android:src="@mipmap/icon_rich_size" />
+
+
+            <!--<ImageButton-->
+            <!--android:id="@+id/action_color"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="48dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="?android:selectableItemBackground"-->
+            <!--android:contentDescription="@null"-->
+            <!--android:onClick="setFontColor"-->
+            <!--android:scaleType="center"-->
+            <!--android:src="@mipmap/icon_rich_color"/>-->
+
+            <Button
+                android:id="@+id/action_color"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:contentDescription="@null"
+                android:onClick="setFontColor"
+                android:textColor="@color/black"
+                android:scaleType="center"
+                android:text="A"
+                android:textSize="25sp" />
+
+
+            <ImageButton
+                android:id="@+id/action_image"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="?android:selectableItemBackground"
+                android:contentDescription="@null"
+                android:onClick="insertImg"
+                android:scaleType="center"
+                android:src="@mipmap/icon_rich_img" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_tools"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true">
+
+
+        <com.dodo.myrichtext.richeditor.RichEditor
+            android:id="@+id/editor"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_300dip"
+            android:layout_marginLeft="@dimen/dimen_5dip"
+            android:layout_marginRight="@dimen/dimen_5dip"
+            android:gravity="top|left"
+            android:paddingTop="@dimen/dimen_10dip" />
+
+    </ScrollView>
+</RelativeLayout>
+
